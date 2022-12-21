@@ -6,7 +6,7 @@ function fetchInventoryIndex(janCode) {
   const res = UrlFetchApp.fetch(url,{muteHttpExceptions: true});
 
   const json = JSON.parse(res.getContentText());
-  if (!json.totalResultsReturned === 0) return {"name":"", "image":{"medium":""}, "brand": {"name":""}};
+  if (json.totalResultsReturned === 0) return {"name":"", "image":{"medium":""}, "brand": {"name":""}};
   return json.hits[0];
 }
 
