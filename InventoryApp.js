@@ -29,13 +29,13 @@ function onChangeSheet(e) {
 
     //janCode検索
     var data = sheet.getRange(2, 2, i, 1).getValues();
-    var cnt = 0;
+//     var cnt = 0;
     // この配列に他の配列や値を結合して新しい配列を返します
     var ary = Array.prototype.concat.apply([],data);
     for (var idx　=　0; idx　<　ary.length; idx++){
-      if (ary[idx] === janCode) { 
-        cnt++;
-      }
+//       if (ary[idx] === janCode) { 
+//         cnt++;
+//       }
     }
   }); 
 }
